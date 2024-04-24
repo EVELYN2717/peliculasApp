@@ -1,0 +1,25 @@
+.contenido {
+    margin-top: 60px;
+    padding: 50px;
+    max-width: 1400px;
+    min-height: 300px;
+    max-height: 360px;
+    background-color: rgb(36, 108, 167);
+
+    .titulo {
+        margin: auto;
+        padding: 50px;
+        color: #fff;
+        font-family: sans-serif;
+        >h2 {
+            font-size: 3em;
+            font-weight: 700;
+            line-height: 1;
+        }
+        >h3 {
+            font-size: 2em;
+            font-weight: 600;
+            margin: 0;
+        }
+    }
+}
