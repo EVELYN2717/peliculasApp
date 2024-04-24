@@ -1,1 +1,18 @@
-<p>lista-resultados works!</p>
+<app-header></app-header>
+<div class="panel">
+    <div class="resultados">
+        <div class="card">
+            <div class="detalles">
+                <img src="https://media.themoviedb.org/t/p/w94_and_h141_bestv2/rmTNHzI0Joc4irx3nkFMWsYWp5c.jpg" alt="poster">
+                <div class="texto">
+                    <h2>Arthur</h2>
+                    <h4>Octubre 7, 1996</h4>
+                    <p>The show revolves around the lives of 8-year-old Arthur Read, an anthropomorphic aardvark, his friends and family, and their daily interactions with each other.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="paginacion">
+        <mat-paginator hidePageSize [length]="100" [pageSize]="10" showFirstLastButtons></mat-paginator>
+    </div>
+</div>
