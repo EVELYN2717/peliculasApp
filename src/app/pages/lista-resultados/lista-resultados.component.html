@@ -1,16 +1,18 @@
 <app-header></app-header>
 <div class="panel">
     <div class="resultados">
-        <div class="card">
-            <div class="detalles">
-                <img src="https://media.themoviedb.org/t/p/w94_and_h141_bestv2/rmTNHzI0Joc4irx3nkFMWsYWp5c.jpg" alt="poster">
-                <div class="texto">
-                    <h2>Arthur</h2>
-                    <h4>Octubre 7, 1996</h4>
-                    <p>The show revolves around the lives of 8-year-old Arthur Read, an anthropomorphic aardvark, his friends and family, and their daily interactions with each other.</p>
+        @for(peli of responseData.results; track peli.id) {
+            <div class="card">
+                <div class="detalles">
+                    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{peli.poster_path}}" alt="Poster Not Found">
+                    <div class="texto">
+                        <h2>{{peli.title}}</h2>
+                        <h4>{{peli.release_date}}</h4>
+                        <p>{{peli.overview}}</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        } 
     </div>
     <app-paginacion></app-paginacion>
 </div>

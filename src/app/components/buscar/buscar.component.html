@@ -1,6 +1,7 @@
 <div class="buscador">
     <label>
-        <input type="text" placeholder="Search for a movie, tv show, person....." value>
+        <input type="text" (keyup)="setSearch($event)" placeholder="Search for a movie, tv show, person....." 
+            (keydown)="onKeydown($event)">
     </label>
-    <input type="submit" value="Search">
+    <button type="submit" (click)="onKeydown($event)">Search</button>
 </div>

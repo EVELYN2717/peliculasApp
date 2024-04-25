@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, } from '@angular/core';
 import { HeaderComponent } from '../../components/header/header.component';
 import { ScrollPersonajesComponent } from '../../components/scroll-personajes/scroll-personajes.component';
+
 
 @Component({
   selector: 'app-detalles-pelicula',
@@ -10,5 +11,8 @@ import { ScrollPersonajesComponent } from '../../components/scroll-personajes/sc
   styleUrl: './detalles-pelicula.component.scss'
 })
 export class DetallesPeliculaComponent {
+
+
+ 
 
 }
