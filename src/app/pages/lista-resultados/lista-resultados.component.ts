@@ -1,9 +1,11 @@
-import { Component, OnInit, inject  } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { HeaderComponent } from '../../components/header/header.component';
 import { PaginacionComponent } from '../../components/paginacion/paginacion.component';
-import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { ActivatedRoute } from '@angular/router';
 import { CardModule } from 'primeng/card'; 
+import { MatPaginatorModule, MatPaginatorIntl } from '@angular/material/paginator';
+
 
 @Component({
   selector: 'app-lista-resultados',
@@ -11,11 +13,13 @@ import { CardModule } from 'primeng/card';
   imports: [HeaderComponent, 
     PaginacionComponent, 
     HttpClientModule, 
-    CardModule],
-  providers: [],
+    CardModule,
+    MatPaginatorModule],
+  providers: [{provide: MatPaginatorIntl}],
   templateUrl: './lista-resultados.component.html',
   styleUrl: './lista-resultados.component.scss'
 })
+
 export class ListaResultadosComponent implements OnInit {
 
   private http = inject(HttpClient);
@@ -26,6 +30,7 @@ export class ListaResultadosComponent implements OnInit {
       Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiIxYzdlNjY1YmYzYTc1YzBiMzU1ZWE0ZmIxMTBmNDFlMyIsInN1YiI6IjY2MmE2OTE3MWQ3OGYyMDExZjJmZmE4YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.HDQi9ffYMC0HEchq6xW0AlUeoHlOGObj9SLZUIdKasc'
     }
   }
+
 
   constructor(private route: ActivatedRoute) { }
 
