@@ -1,22 +1,15 @@
-<!-- <div class="cards-elenco">
-    <div class="card">
-
-    </div>
-    <img>
-    <div class="personaje">
-
-    </div>
-</div> -->
 <div class="scroll-personajes">
     <cdk-virtual-scroll-viewport orientation="horizontal" itemSize="50" class="personajes">
-      <div *cdkVirtualFor="let item of items" class="item">
-        <div class="card">
-            <img class="profile w-full" src="https://media.themoviedb.org/t/p/w300_and_h450_bestv2/vd23G0qvY33W8EjSc92xYKG1h7J.jpg" alt="Chai Hansen">
-            <div class="descripcion">
-                <label class="nombre">Chai Hansen</label>
-                <label class="alias">Monkey</label>
+    @for(cast of listCast; track cast.id) {
+        <div class="item">
+            <div class="card">
+                <img class="profile w-full" src="{{cast.profile_path}}">                
+                <div class="descripcion">
+                    <label class="nombre">{{ cast.name }}</label>
+                    <label class="alias">{{ cast.character }}</label>
+                </div>
             </div>
         </div>
-    </div>
+    }
     </cdk-virtual-scroll-viewport>
   </div>

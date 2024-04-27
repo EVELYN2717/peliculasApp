@@ -3,14 +3,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
     background-color: rgb(3, 37, 65);
     height: 64px;
-    z-index: 50;
     transition: top .2s linear;
-    
+    min-width: 1000px;
     .logo {
         display: block;
         margin-right: 16px;

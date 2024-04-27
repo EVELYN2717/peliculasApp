@@ -1,11 +1,9 @@
 .header-descripcion {
-    padding: 80px;
-    max-width: 1400px;
-    min-height: 360px;
-    max-height: 300px;
+    min-width: 1000px;
     background: linear-gradient(to bottom right, rgba(10.5, 31.5, 31.5, 1), rgba(10.5, 31.5, 31.5, 0.84));
     .detalles {
         display: flex;
+        justify-content: center;
         >img {
             min-width: 300px;
             width: 300px;
@@ -16,71 +14,50 @@
             display: flex;
             flex-direction: column;
             color: #fff;
+            justify-content: space-around;
             .desc-principal{
                 display: flex;
                 flex-direction: column;
+                min-width: 700px;
+                max-width: 700px;
                 .titulo {
                     margin: 30px 30px 10px 30px;
                     font-weight: 700;
                     font-size: 2.2em;
                 }
                 .fecha {
-                    font-weight: 400;
+                    text-transform: uppercase;
+                    font-weight: 300;
                     color: rgba(255, 255, 255, 0.527);
                     margin: 5px 30px;
-                    font-size: 1.6em;
+                    font-size: 1.2em;
                 }
-                .duracion {
+                >h3 {
                     margin: 10px 30px;
-                    width: 30%;
-                    font-size: 1.3em;
-                }   
+                    font-size: 1.8em;
+                    font-weight: 700;
+                }  
                 >p {
-                    font-size: 1.3em;
-                    margin: 50px 30px;
+                    font-size: 1em;
+                    margin: 20px 30px;
                     line-height: normal;
                 }
             }
-        }
-        .calificacion {
-            display: flex;
-            margin: auto;
-            width: auto;
-            font-family: "Source Sans Pro", Arial, sans-serif;
-            font-weight: 700;
-            .porcentaje {
-                display: inline-block;
-                width: 68px;
-                height: 68px;
-                border-radius: 50%;
-                padding: 4px;
-                background-color: #081c22;
-                border: 5px solid aquamarine;
-                font-size: 1.8em;
-                .dato {
-                    font-variant: normal;
-                    text-transform: none;
-                    line-height: 2;
-                    margin: 12px;
-                    -webkit-font-smoothing: antialiased;
-                }
-            }
-            .label {
-                margin: auto 10px;
-                width: 30%;
-                font-size: 1.3em;
-            }
-        }        
+        }      
     }
 }
 .elenco {
-    padding: 50px;
-    max-width: 1400px;
-    min-height: 360px;
-    max-height: 300px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     .titulo {
-        font-weight: 600;
-        font-size: 1.4em;
-        margin-bottom: 20px; 
+        >h3 {
+            margin: 20px 0;
+            font-weight: 600;
+            font-size: 1.4em;
+            margin-bottom: 20px; 
+        }
+
     }
 }

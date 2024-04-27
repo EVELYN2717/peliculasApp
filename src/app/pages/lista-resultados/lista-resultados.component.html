@@ -1,18 +1,20 @@
 <app-header></app-header>
 <div class="panel">
-    <div class="resultados">
-        @for(peli of responseData.results; track peli.id) {
-            <div class="card">
-                <div class="detalles">
-                    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{peli.poster_path}}" alt="Poster Not Found">
-                    <div class="texto">
-                        <h2>{{peli.title}}</h2>
-                        <h4>{{peli.release_date}}</h4>
-                        <p>{{peli.overview}}</p>
+    <div class="body">
+        <div class="resultados">
+            @for(peli of listMovie; track peli.id) {
+                <div class="card" (click)="goToDetails(peli)">
+                    <div class="detalles">
+                        <img src="{{peli.poster_path}}">
+                        <div class="texto">
+                            <h2>{{peli.title}}</h2>
+                            <h4>{{peli.release_date}}</h4>
+                            <p>{{peli.overview}}</p>
+                        </div>
                     </div>
                 </div>
-            </div>
-        } 
+            } 
+        </div>
+        <app-paginacion></app-paginacion>
     </div>
-    <app-paginacion></app-paginacion>
 </div>

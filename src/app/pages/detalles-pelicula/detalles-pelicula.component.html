@@ -2,26 +2,20 @@
 <div class="contenido">
     <div class="header-descripcion">
         <div class="detalles">
-            <img src="https://media.themoviedb.org/t/p/w94_and_h141_bestv2/rmTNHzI0Joc4irx3nkFMWsYWp5c.jpg" alt="poster">
+            <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2{{movie.poster_path}}" alt="poster">
             <div class="descripcion">
                 <div class="desc-principal">
-                    <label class="titulo">Arthur</label>
-                    <label class="fecha">(Octubre 7, 1996)</label>
-                    <div class="duracion">20 Episodios</div>
-                    <p>The show revolves around the lives of 8-year-old Arthur Read, an anthropomorphic aardvark, his friends and family, and their daily interactions with each other.</p>
-                </div>
-                <div class="calificacion">
-                    <div class="porcentaje">
-                        <span class="dato">71%</span>                        
-                    </div>
-                    <div class="label">Puntaje Usuarios</div>
+                    <label class="titulo">{{ movie.title }} ({{ year }})</label>
+                    <label class="fecha">{{ movie.release_date }} ({{ movie.original_language}})</label>
+                    <h3>Overview</h3>
+                    <p>{{ movie.overview }}</p>
                 </div>
             </div>
         </div>
     </div>
     <div class="elenco">
-        <div class="titulo">Personajes</div>
-        <app-scroll-personajes></app-scroll-personajes>
+        <div class="titulo"><h3>Personajes</h3></div>
+        <app-scroll-personajes [characters]="responseData.cast"></app-scroll-personajes>
     </div>
 </div>
 
